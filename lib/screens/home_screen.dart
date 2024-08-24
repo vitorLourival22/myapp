@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'lib/assets/images/camale.jpg',
+              'lib/assets/images/logo.png',
               width: 150,
               height: 150,
             ),
