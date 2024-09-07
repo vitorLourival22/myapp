@@ -16,13 +16,31 @@ Widget build(BuildContext context) {
         child: Column(
           children: [
             Image.network(
-              'https://via.placeholder.com/150',
+              'https://files.cercomp.ufg.br/weby/up/579/o/Forms.png',
                width: 150,
                height: 150,
             ),
             SizedBox(height: 20,),
             TextFormField(
               decoration: InputDecoration(labelText: 'campo1'),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'por favar,prencha este campo';
+                }
+                return null;
+              },
+            ),
+             TextFormField(
+              decoration: InputDecoration(labelText: 'campo2'),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'por favar,prencha este campo';
+                }
+                return null;
+              },
+            ),
+             TextFormField(
+              decoration: InputDecoration(labelText: 'campo3'),
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'por favar,prencha este campo';
@@ -40,11 +58,11 @@ Widget build(BuildContext context) {
              },
              child: Text('Enviar'),
              ),
-             ],
-             ),
-             ),
-             ),
-             );
-             }
-             }
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
             

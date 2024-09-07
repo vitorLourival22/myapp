@@ -6,6 +6,29 @@ class HomeScreen extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         title: Text('Home'),
+        actions: [
+          PopupMenuButton<String>(
+            onSelected: (String result){
+              if(result == 'formulario'){
+                Navigator.pushNamed(context, '/form');
+              }
+            },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+              PopupMenuItem<String>(
+                value: 'Formulario',
+                child: Text(' Ir para o Formulario'),
+                ),
+               PopupMenuItem<String>(
+                value: 'Compras',
+                child: Text('Compras'),
+                ),
+                PopupMenuItem<String>(
+                value: 'Contato',
+                child: Text(' Contato'),
+                ),
+            ],
+          )
+        ],
       ),
       body: Center(
         child: Column(
